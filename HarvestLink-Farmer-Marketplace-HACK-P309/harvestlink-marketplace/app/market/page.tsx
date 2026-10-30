@@ -1,0 +1,3 @@
+import MarketClient from "@/components/MarketClient";
+export const dynamic = "force-dynamic";
+export default function Market(){return <main className="container py-12"><p className="text-xs tracking-[.2em] uppercase font-bold text-[#1f6b4a]">The marketplace</p><h1 className="text-4xl md:text-5xl font-black mt-2">Fresh from the source.</h1><p className="muted mt-3 max-w-xl">Browse available produce from local growers. Prices and stock are shown as farmers publish them.</p><MarketClient/></main>}

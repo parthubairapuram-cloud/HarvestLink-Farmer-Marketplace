@@ -1,0 +1,2 @@
+import AuthForm from "@/components/AuthForm";
+export default function Register({searchParams}:{searchParams:{role?:string}}){return <main className="container py-16"><AuthForm mode="register" initialRole={searchParams.role==="farmer"?"farmer":"buyer"}/></main>}\n

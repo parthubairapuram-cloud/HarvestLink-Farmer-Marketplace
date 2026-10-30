@@ -1,0 +1,3 @@
+import mongoose, { Schema } from "mongoose";
+const OrderSchema = new Schema({ buyer: { type: Schema.Types.ObjectId, ref: "User", required: true, index: true }, farmer: { type: Schema.Types.ObjectId, ref: "User", required: true, index: true }, items: [{ product: { type: Schema.Types.ObjectId, ref: "Product" }, name: String, quantity: Number, unit: String, unitPrice: Number }], total: { type: Number, required: true }, note: String, fulfillment: { type: String, enum: ["pickup", "delivery"], default: "pickup" }, status: { type: String, enum: ["requested", "accepted", "ready", "completed", "cancelled"], default: "requested" } }, { timestamps: true });
+export default mongoose.models.Order || mongoose.model("Order", OrderSchema);
